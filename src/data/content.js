@@ -1,8 +1,8 @@
 export const doctor = {
   name: "Dra. Maria Laura Almeida",
   tagline: "Cuidando com amor do seu bem mais precioso",
-  phone: "(33) 99141-0220",
-  phoneHref: "5533991410220",
+  phone: "(21) 99927-5454",
+  phoneHref: "5521999275454",
   instagram: "@mlauralmeida",
   instagramHref: "https://instagram.com/mlauralmeida",
   crm: "CRM 52130723-1/RJ",
