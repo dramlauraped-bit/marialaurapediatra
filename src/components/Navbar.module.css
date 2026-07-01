@@ -1,0 +1,118 @@
+.header {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 50;
+  background: rgb(247 248 243 / 0.85);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 72px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.navLink {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+
+.navLink:hover {
+  color: var(--color-sage-700);
+}
+
+.ctaDesktop.ctaDesktop {
+  display: none;
+}
+
+.menuToggle {
+  display: inline-flex;
+  color: var(--color-ink);
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    display: flex;
+  }
+
+  .ctaDesktop.ctaDesktop {
+    display: inline-flex;
+  }
+
+  .menuToggle {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  position: fixed;
+  inset-block-start: 72px;
+  inset-inline: 0;
+  height: calc(100dvh - 72px);
+  z-index: 1;
+  background: var(--color-bg);
+  transform: translateX(100%);
+  transition: transform var(--dur-base) var(--ease-standard);
+  overflow-y: auto;
+}
+
+.mobileMenuOpen {
+  transform: translateX(0);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.5rem var(--container-pad) 3rem;
+}
+
+.mobileNavLink {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.mobileNav :global(.btn) {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobileMenu {
+    transition: none;
+  }
+}

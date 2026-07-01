@@ -1,0 +1,97 @@
+.hero {
+  position: relative;
+  min-height: clamp(560px, 92dvh, 900px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(0deg, rgb(20 29 18 / 0.82) 0%, rgb(20 29 18 / 0.15) 55%, rgb(20 29 18 / 0) 80%),
+    linear-gradient(100deg, rgb(20 29 18 / 0.9) 0%, rgb(20 29 18 / 0.68) 40%, rgb(20 29 18 / 0.32) 68%, rgb(20 29 18 / 0.1) 90%);
+}
+
+.grid {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-block-start: calc(72px + 1.5rem);
+  padding-block-end: clamp(3rem, 2.5rem + 3vw, 5.5rem);
+}
+
+.copy {
+  max-width: 46ch;
+}
+
+.title {
+  font-size: clamp(2.1rem, 1.6rem + 2.1vw, 3.4rem);
+  line-height: 1.08;
+  color: #ffffff;
+}
+
+.subtitleWrap {
+  padding-block: clamp(2rem, 1.6rem + 1.6vw, 2.75rem);
+}
+
+.subtitle {
+  font-size: clamp(1.05rem, 1rem + 0.25vw, 1.25rem);
+  color: var(--color-ink);
+  line-height: 1.65;
+  max-width: 52ch;
+}
+
+.actions {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.actions :global(.btn) {
+  width: 100%;
+}
+
+.btnOnPhoto {
+  background: rgb(255 255 255 / 0.12);
+  border: 1.5px solid rgb(255 255 255 / 0.7);
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.btnOnPhoto:hover {
+  background: rgb(255 255 255 / 0.22);
+}
+
+@media (min-width: 480px) {
+  .actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .actions :global(.btn) {
+    width: auto;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .btnOnPhoto {
+    background: rgb(34 50 31 / 0.7);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
