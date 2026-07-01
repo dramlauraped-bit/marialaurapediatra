@@ -22,8 +22,7 @@ tipografia serifada + sans-serif, movimento discreto e foco em conversão
    como placeholder. Conecte o link real de uma plataforma (Doctoralia,
    Calendly etc.) em `src/components/Booking.jsx`.
 5. **Domínio.** As tags de SEO (canonical, Open Graph, JSON-LD) em
-   `index.html` usam `https://www.mlauralmeida.com.br/` como exemplo. Troque
-   pelo domínio real depois de registrado.
+   `index.html` já apontam para `https://marialaurapediatra.com/`.
 6. **Formulário de agendamento.** Hoje o formulário monta uma mensagem e abre
    o WhatsApp (não depende de backend). Se preferir salvar os leads em algum
    CRM/planilha, será preciso adicionar um endpoint próprio.
