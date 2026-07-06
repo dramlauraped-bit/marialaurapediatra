@@ -69,9 +69,14 @@
   grid-template-rows: 1fr;
 }
 
-.answerText {
+/* Grid item sem padding próprio: colapsa a 0 de verdade quando fechado.
+   O padding fica no <p> interno, cortado pelo overflow. */
+.answerInner {
   overflow: hidden;
   min-height: 0;
+}
+
+.answerText {
   color: var(--color-ink-soft);
   line-height: 1.65;
   max-width: 65ch;

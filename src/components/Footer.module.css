@@ -69,6 +69,8 @@
 
 .crm {
   letter-spacing: 0.02em;
+  /* Afasta o CRM do botão flutuante do WhatsApp (fixed no canto inferior direito) */
+  margin-inline-end: 4.5rem;
 }
 
 @media (min-width: 700px) {

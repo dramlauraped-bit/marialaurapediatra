@@ -48,7 +48,9 @@ export default function FAQ() {
                   aria-labelledby={buttonId}
                   className={`${styles.answer} ${isOpen ? styles.answerOpen : ""}`}
                 >
-                  <p className={styles.answerText}>{item.answer}</p>
+                  <div className={styles.answerInner}>
+                    <p className={styles.answerText}>{item.answer}</p>
+                  </div>
                 </div>
               </div>
             );

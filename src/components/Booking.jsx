@@ -110,6 +110,7 @@ export default function Booking() {
               id="responsibleName"
               name="responsibleName"
               type="text"
+              autoComplete="name"
               value={form.responsibleName}
               onChange={handleChange}
               aria-invalid={Boolean(errors.responsibleName)}
@@ -166,6 +167,8 @@ export default function Booking() {
               id="phone"
               name="phone"
               type="tel"
+              autoComplete="tel"
+              inputMode="tel"
               value={form.phone}
               onChange={handleChange}
               aria-invalid={Boolean(errors.phone)}
